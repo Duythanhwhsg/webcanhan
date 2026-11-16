@@ -20,16 +20,19 @@
     <meta name="twitter:image" content="https://duythanhwhsg.github.io/webcanhan/logo-share.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Be+Vietnam+Pro:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --bg: #F2F8FF;
-            --card: #FFFFFF;
-            --ink: #1F2A44;
-            --muted: #5A6785;
-            --blue: #3D7BFF;
-            --sun: #FFD466;
+            --bg: #F5F8FF;
+            --card: #E8F1FF;
+            --ink: #334155;
+            --muted: #64748B;
+            --primary: #1E3A8A;
+            --border: #C7DBFF;
+            --blue: #2563EB;
+            --sun: #F5C451;
+            --sun-hover: #EAB308;
             --pink: #FFB3CB;
             --mint: #A8EBD3;
             --sky: #BFDBFF;
@@ -46,6 +49,8 @@
                 --card: #1B2640;
                 --ink: #EEF3FF;
                 --muted: #A9B6D3;
+                --primary: #BFD3FF;
+                --border: #2C4170;
                 --blue: #7BA6FF;
                 --sun: #E9BE48;
                 --pink: #D98BA8;
@@ -61,6 +66,8 @@
             --card: #1B2640;
             --ink: #EEF3FF;
             --muted: #A9B6D3;
+            --primary: #BFD3FF;
+            --border: #2C4170;
             --blue: #7BA6FF;
             --sun: #E9BE48;
             --pink: #D98BA8;
@@ -84,15 +91,15 @@
             background: var(--bg);
             color: var(--ink);
             font-family: "Be Vietnam Pro", system-ui, sans-serif;
-            line-height: 1.75;
-            font-size: 17px;
+            line-height: 1.7;
+            font-size: 16px;
             overflow-x: hidden
         }
 
         h1,
         h2,
         h3 {
-            font-family: "Baloo 2", "Be Vietnam Pro", system-ui, sans-serif;
+            font-family: "Be Vietnam Pro", system-ui, sans-serif;
             line-height: 1.15;
             margin: 0
         }
@@ -150,7 +157,7 @@
             gap: 10px;
             flex: none;
             text-decoration: none;
-            font-family: "Baloo 2", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             font-weight: 800;
             font-size: 1.25rem;
             line-height: 1
@@ -404,7 +411,7 @@
             border-radius: 50%;
             display: grid;
             place-items: center;
-            font-family: "Baloo 2", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             font-weight: 800;
             font-size: clamp(3.5rem, 12vw, 5.5rem);
             color: var(--blue);
@@ -784,7 +791,7 @@
 
         .feat b {
             display: block;
-            font-family: "Baloo 2", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             font-size: 1.05rem
         }
 
@@ -923,7 +930,7 @@
 
         .soc b {
             display: block;
-            font-family: "Baloo 2", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             font-size: 1.15rem;
             line-height: 1.2
         }
@@ -1087,7 +1094,7 @@
         }
 
         .stack .txt {
-            font-family: "Baloo 2", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             font-weight: 800;
             font-size: 1.2rem
         }
@@ -1108,7 +1115,7 @@
 
         .stack b {
             display: block;
-            font-family: "Baloo 2", sans-serif;
+            font-family: "Be Vietnam Pro", sans-serif;
             font-size: 1.05rem;
             line-height: 1.25
         }
@@ -1275,6 +1282,103 @@
                 animation: none !important;
                 transition: none !important;
                 scroll-behavior: auto !important
+            }
+        }
+
+        /* Bộ màu & phông chữ Duy Thanh */
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+            font-weight: 800;
+            line-height: 1.25
+        }
+
+        .proj h3,
+        .support h3,
+        .contact h2 {
+            color: inherit
+        }
+
+        .hero h1 {
+            line-height: 1.15
+        }
+
+        .card p {
+            color: var(--ink)
+        }
+
+        .bar {
+            border: 1px solid var(--border)
+        }
+
+        nav a {
+            color: var(--primary)
+        }
+
+        nav a:hover {
+            color: var(--blue)
+        }
+
+        nav a.cta {
+            background: var(--blue)
+        }
+
+        .card,
+        .sgroup {
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: 0 6px 20px rgba(30, 58, 138, .06)
+        }
+
+        .btn.primary {
+            background: var(--sun);
+            color: #1F2937;
+            font-weight: 700;
+            box-shadow: none;
+            transition: background .2s, transform .15s
+        }
+
+        .btn.primary:hover {
+            background: var(--sun-hover)
+        }
+
+        .btn.soft {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 11px 24px;
+            font-weight: 700;
+            box-shadow: none;
+            transition: background .2s, color .2s, transform .15s
+        }
+
+        .btn.soft:hover {
+            background: var(--primary);
+            color: var(--bg)
+        }
+
+        .contact {
+            background: var(--blue)
+        }
+
+        .support .btn.primary {
+            background: var(--primary);
+            color: #fff
+        }
+
+        .support .btn.primary:hover {
+            background: #172C6B
+        }
+
+        @media (max-width:640px) {
+            body {
+                font-size: 15px
+            }
+
+            .card,
+            .sgroup {
+                border-radius: 18px
             }
         }
     </style>
